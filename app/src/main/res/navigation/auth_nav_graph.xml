@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/authLaucherFragment">
+
+    <fragment
+        android:id="@+id/authLaucherFragment"
+        android:name="com.digipod.authcomponent.auth.AuthLaucherFragment"
+        android:label="fragment_auth_laucher"
+        tools:layout="@layout/fragment_auth_laucher" >
+        <action
+            android:id="@+id/action_authLaucherFragment_to_phoneAuthFragment"
+            app:destination="@id/phoneAuthFragment" />
+        <action
+            android:id="@+id/action_authLaucherFragment_to_EPLoginFragment"
+            app:destination="@id/EPLoginFragment" />
+        <action
+            android:id="@+id/action_authLaucherFragment_to_googleLoginFragment"
+            app:destination="@id/googleLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/EPLoginFragment"
+        android:name="com.digipod.authcomponent.auth.EPLoginFragment"
+        android:label="fragment_e_p_login"
+        tools:layout="@layout/fragment_e_p_login" />
+    <fragment
+        android:id="@+id/googleLoginFragment"
+        android:name="com.digipod.authcomponent.auth.GoogleLoginFragment"
+        android:label="fragment_google_login"
+        tools:layout="@layout/fragment_google_login" />
+    <fragment
+        android:id="@+id/phoneAuthFragment"
+        android:name="com.digipod.authcomponent.auth.PhoneAuthFragment"
+        android:label="fragment_phone_auth"
+        tools:layout="@layout/fragment_phone_auth" />
+</navigation>
